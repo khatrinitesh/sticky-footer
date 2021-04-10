@@ -1,0 +1,29 @@
+/* when making a sticky footer I always find it best to make the footer a direct child of de body (or other element thats 100% height of the page) and make give it position absolute. now the footer will always be at the bottom of the page. To make sure content doesnt overflow just give the body a small padding at the bottom (at least the size of the footer) */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+  height: 60px;
+  background-color: blue;
+  color: white;
+}

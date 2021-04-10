@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sticky Footer</title>
+	<link type='text/css' rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="content">
+  <button onclick="addContent()"> add content </button>
+  <button onclick="removeContent()"> remove content </button>
+</div>
+<div class="footer">
+  this is the footer
+</div>
+
+
+
+<script type="text/javascript">
+   var content = document.getElementsByClassName('content')[0];
+
+  function addContent() {
+    var elm = document.createElement("p");
+    var text = document.createTextNode("Lorem ipsum dolor sit amet,     consectetur adipiscing elit. Duis pulvinar orci ut erat egestas     tristique. Maecenas tincidunt nunc ligula, ut dapibus nisi           fringilla eu. Donec tristique ac lectus vel vehicula. Sed dapibus   justo in felis ultrices, ac faucibus arcu molestie. Morbi           tincidunt consequat eros at ornare. Class aptent taciti sociosqu     ad litora torquent per conubia nostra, per inceptos himenaeos.       Aenean lacinia facilisis lacus et cursus. Vestibulum at aliquet     lacus. Curabitur quam dui, finibus non molestie in, feugiat vitae   dui.");
+    elm.appendChild(text);
+    
+    content.appendChild(elm);
+  }
+
+  function removeContent() {
+    var child = content.childNodes[4];
+    content.removeChild(child);
+  }
+</script>
+
+
+
+</body>
+</html>
